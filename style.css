@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
+.contentBackground{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 50vh 50vh;
+    grid-template-areas: 'form card'
+                         'form card';
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: card;
+    background-color: rgb(241, 241, 241);
+}
+
+.card #creditCard{
+    position: relative;
+    width: 33vw;
+    height: 12vw;
+    background: linear-gradient(rgb(176, 40, 255), rgb(183, 35, 252));
+    transform: rotate3d(2, -2, -2, -0.2turn);
+    box-shadow: 10px 10px 10px 0px rgb(223, 223, 223);
+    border-radius: 10px;
+    animation: fly 4s infinite;
+}
+
+.card #creditCard #boxText{
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 15%;
+    width: 77%;
+    top: 82%;
+    left: 22%;
+    font-size: 0.9vw;
+}
+
+
+.card #creditCard #creditCardName{
+    display: inline-block;
+    color: white;
+    letter-spacing: 2px;
+    text-overflow: ellipsis;
+    font-family: 'Roboto Condensed', sans-serif;
+    overflow: hidden;
+}
+
+
+@keyframes fly {
+    0%, 100%{
+        top: 7%;
+    }
+
+    50%{
+        top: 3%;
+    }
+}
+
+.card #creditCard img{
+    height: 15%;
+    width: 15%;
+}
+
+.card #creditCard #nu{
+    position: relative;
+    top: 66%;
+    left: 4%;
+}
+
+.card #creditCard #master{
+    position: relative;
+    left: 67%;
+    bottom: 10%;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: form;
+    padding: 50px;
+}
+
+.form .menu{
+    position: absolute;
+    bottom: 80%;
+}
+
+.form h1{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2em
+}
+
+.form img{
+    height:20px;
+}
+
+
+.form .organization p{
+    color: rgb(194, 194, 194);
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 19px;
+}
+
+.form .organization .colors label input{
+    height: 50px;
+    width: 50px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+    appearance: none;
+    outline: none;
+}
+
+#oneColorInput{ 
+    background: linear-gradient(rgb(126, 57, 253), rgb(168, 75, 255));
+ }
+
+ #oneColorInput:checked{ 
+    background: linear-gradient(rgb(93, 42, 189), rgb(118, 52, 179));
+    border-style: solid;
+    border-width: 1px;
+ }
+
+ #twoColorInput{ 
+    background: linear-gradient(rgb(46, 46, 46), rgb(39, 39, 39));
+ }
+
+ #twoColorInput:checked{ 
+    background: linear-gradient(rgb(0, 0, 0), rgb(29, 29, 29));
+    border-style: solid;
+    border-width: 1px;
+ }
+
+ #threeColorInput{ 
+    background: linear-gradient(rgb(255, 199, 14), rgb(255, 166, 0));
+ }
+
+ #threeColorInput:checked{ 
+    background: linear-gradient(rgb(219, 171, 14), rgb(189, 124, 3));
+    border-style: solid;
+    border-width: 1px;
+ }
+
+ #fourColorInput{ 
+    background: linear-gradient(rgb(229, 255, 0), rgb(154, 179, 17));
+ }
+
+ #fourColorInput:checked{ 
+    background: linear-gradient(rgb(190, 211, 0), rgb(100, 116, 12));
+    border-style: solid;
+    border-width: 1px;
+ }
+
+ .form .organization .changePosition button{
+    height: 40px;
+    width: 150px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+    background-color: white;
+    border-color: rgb(144, 32, 219);
+}
+
+.form .organization .changePosition button:hover{
+    background-color: rgb(211, 211, 211);
+}
+
+.form #inputName{
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: rgb(230, 230, 230);
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    width: 350px;
+    padding: 0px 15px;
+    margin: 8px 0px;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+
+@media only screen and (max-width: 800px){
+    .contentBackground{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 40vh 60vh;
+        grid-template-areas: 'card card'
+                             'form form';
+    }
+
+    .card #creditCard{
+        width: 50vw;
+        height: 19vw;
+    }
+
+    .menu{
+        position: relative;
+        top: 45%;
+    }
+    
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Seu cartáo NU</title>
+</head>
+<body>
+    <div class="contentBackground">
+        <div class="card">
+            <div id="creditCard">
+                <div id="boxText">
+                    <p id="creditCardName"></p>
+                </div>
+                <img id="nu" src="img/nubank-card-logo.png" alt="">
+                <img id="master" src="img/Mastercard-Logo.png" alt="">
+            </div>
+        </div>
+        <div class="form">
+            <div class="menu">
+                <h1>Crie e personalize seu cartão</h1>
+                <img src="img/nubank-logo.png" alt="">
+            </div>
+            <div class="organization">
+                <p>Nome Completo:</p>
+                <input type="text" id="inputName" onkeyup="getVal()" maxlength="25">
+                <div class="colors">
+                    <p>Escolha a cor do cartão:</p>
+                    <label id="oneColor">
+                        <input id="oneColorInput" type="radio" name="change" onclick="changeColor()" checked>
+                    </label>
+                    <label id="twoColor">
+                        <input id="twoColorInput" type="radio" name="change" onclick="changeColor()">
+                    </label>
+                    <label id="threeColor">
+                        <input id="threeColorInput" type="radio" name="change" onclick="changeColor()">
+                    </label>
+                    <label id="fourColor">
+                        <input id="fourColorInput" type="radio" name="change" onclick="changeColor()">
+                    </label>
+                </div>
+                <div class="changePosition">
+                    <p>Posição do cartão:</p>
+                    <button id="horizontal" onclick="positionHorizontal()">HORIZONTAL</button>
+                    <button id="vertical" onclick="positionVertical()">VERTICAL</button>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
