@@ -3,7 +3,7 @@
 ## Welcome! 👋
 
 Obrigado por está dando uma olhada no meus codigos, qualquer critica sera muito bem-vinda.
-
+[Teste o site clicando aqui](https://nu-card-kxdco6ndz-wendesongomes.vercel.app)
 ## Desktop
 
 ![Previw da tela no desktop](./desing/desktop_layout.png)
